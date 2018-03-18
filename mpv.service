@@ -1,0 +1,11 @@
+[Unit]
+Description=mpv
+
+[Service]
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/mpv --input-ipc-server=/tmp/mpv.socket --idle --reset-on-next-file=all --quiet
+
+[Install]
+WantedBy=default.target
+
